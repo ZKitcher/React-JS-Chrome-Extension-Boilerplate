@@ -1,0 +1,25 @@
+{
+    "short_name": "Chrome Boilerplate",
+    "name": "Chrome Boilerplate.",
+    "version": "0.0.1",
+    "icons": {
+        "16": "./icon16.png",
+        "32": "./icon32.png",
+        "48": "./icon48.png",
+        "128": "./icon128.png"
+    },
+    "background": {
+        "scripts": [
+            "./background.js"
+        ]
+    },
+    "options_page": "./options.html",
+    "browser_action": {
+        "default_popup": "./popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ],
+    "manifest_version": 2
+}
