@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import ListOptions from './ListOptions';
 
 function Options() {
-
     return (
         <div style={styles.content}>
             <h1>Options</h1>

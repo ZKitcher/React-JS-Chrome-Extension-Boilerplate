@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Popup = () => {
+const Content = () => {
+
     return (
         <div>
-            <h1>Pop Up</h1>
+            <h1>content</h1>
         </div>
     );
 };
 
-export default Popup;
+export default Content;
+
