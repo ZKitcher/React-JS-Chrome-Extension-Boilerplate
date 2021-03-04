@@ -11,7 +11,7 @@ module.exports = {
     entry: {
         popup: path.resolve(__dirname, "./contentBase/src/index-popup.js"),
         options: path.resolve(__dirname, "./contentBase/src/index-options.js"),
-        foreground: path.resolve(__dirname, "./contentBase/src/index-foreground.js")
+        content: path.resolve(__dirname, "./contentBase/src/index-content.js")
     },
     output: {
         filename: '[name].bundle.js',
@@ -56,11 +56,10 @@ module.exports = {
 
         // Comment out when pushing to production with 'build:prod'
         new HtmlWebpackPlugin({
-            filename: 'foreground.html',
-            template: 'contentBase/public/html/foreground.html',
-            chunks: ['foreground']
+            filename: 'content.html',
+            template: 'contentBase/public/html/content.html',
+            chunks: ['content']
         }),
-        //
 
         new CopyWebpackPlugin({
             patterns: [
