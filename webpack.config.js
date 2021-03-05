@@ -39,6 +39,10 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: ['html-loader']
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
             }
         ]
     },
@@ -53,14 +57,11 @@ module.exports = {
             template: 'contentBase/public/html/options.html',
             chunks: ['options']
         }),
-
-        // Comment out when pushing to production with 'build:prod'
         new HtmlWebpackPlugin({
             filename: 'content.html',
             template: 'contentBase/public/html/content.html',
             chunks: ['content']
         }),
-
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'contentBase/manifest.json', to: '[name].[ext]' },
